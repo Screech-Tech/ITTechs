@@ -184,6 +184,12 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\csharp-for-beginners.png" />
+    <Content Include="Content\Images\csharp-zip.png" />
+    <Content Include="Content\Images\laptop.jpg" />
+    <Content Include="Content\Images\pdf.png" />
+    <Content Include="Content\Images\unit-testing.png" />
+    <Content Include="Content\Images\video.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -238,6 +244,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\Documents\" />
+    <Folder Include="Content\Logos\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
