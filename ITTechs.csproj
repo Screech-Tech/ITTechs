@@ -177,9 +177,9 @@
     <Compile Include="Entities\ProductItem.cs" />
     <Compile Include="Entities\ProductLinkText.cs" />
     <Compile Include="Entities\ProductType.cs" />
-    <Compile Include="Entities\ReqiredAttribute.cs" />
     <Compile Include="Entities\Section.cs" />
     <Compile Include="Entities\Subscription.cs" />
+    <Compile Include="Entities\SubscriptionProduct.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

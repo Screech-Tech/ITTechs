@@ -7,18 +7,18 @@ using System.Web;
 
 namespace ITTechs.Entities
 {
-    [Table("ProductItem")]
-    public class ProductItem
+    [Table("SubscriptionProduct")]
+    public class SubscriptionProduct
     {
         [Required]
         [Key, Column(Order = 1)]
         public int ProductId { get; set; }
         [Required]
         [Key, Column(Order = 2)]
-        public int ItemId { get; set; }
+        public int SubscriptionId { get; set; }
         [NotMapped]
         public int OldProductId { get; set; }
         [NotMapped]
-        public int OldItemId { get; set; }
+        public int OldSubscriptionId { get; set; }
     }
 }
