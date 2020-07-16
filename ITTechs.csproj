@@ -174,8 +174,10 @@
     <Compile Include="Entities\ItemType.cs" />
     <Compile Include="Entities\Part.cs" />
     <Compile Include="Entities\Product.cs" />
+    <Compile Include="Entities\ProductItem.cs" />
     <Compile Include="Entities\ProductLinkText.cs" />
     <Compile Include="Entities\ProductType.cs" />
+    <Compile Include="Entities\ReqiredAttribute.cs" />
     <Compile Include="Entities\Section.cs" />
     <Compile Include="Entities\Subscription.cs" />
     <Compile Include="Global.asax.cs">
