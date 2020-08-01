@@ -9,6 +9,7 @@ using System.Web;
 using System.Web.Mvc;
 using ITTechs.Entities;
 using ITTechs.Models;
+using ITTechs.Areas.Admin.Extensions;
 
 namespace ITTechs.Areas.Admin.Controllers
 {
@@ -19,7 +20,9 @@ namespace ITTechs.Areas.Admin.Controllers
         // GET: Admin/Product
         public async Task<ActionResult> Index()
         {
-            return View(await db.Products.ToListAsync());
+            var products = await db.Products.ToListAsync();
+            var model = products.Convert(db);
+            return View(model.Result);
         }
 
         // GET: Admin/Product/Details/5

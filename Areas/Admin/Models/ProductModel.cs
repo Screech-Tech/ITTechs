@@ -21,7 +21,9 @@ namespace ITTechs.Areas.Admin.Models
         public string ImageUrl { get; set; }
         public int ProductLinkTextId { get; set; }
         public int ProductTypeId { get; set; }
+        [DisplayName("Product Link Text")]
         public ICollection<ProductLinkText> ProductLinkTexts { get; set; }
+        [DisplayName("Product Type")]
         public ICollection<ProductType> ProductTypes { get; set; }
         public string ProductType {
             get
