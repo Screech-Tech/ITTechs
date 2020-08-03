@@ -10,6 +10,7 @@ using System.Web.Mvc;
 using ITTechs.Entities;
 using ITTechs.Models;
 using ITTechs.Areas.Admin.Extensions;
+using ITTechs.Areas.Admin.Models;
 
 namespace ITTechs.Areas.Admin.Controllers
 {
@@ -21,8 +22,8 @@ namespace ITTechs.Areas.Admin.Controllers
         public async Task<ActionResult> Index()
         {
             var products = await db.Products.ToListAsync();
-            var model = products.Convert(db);
-            return View(model.Result);
+            var model = await products.Convert(db);
+            return View(model);
         }
 
         // GET: Admin/Product/Details/5
@@ -41,9 +42,15 @@ namespace ITTechs.Areas.Admin.Controllers
         }
 
         // GET: Admin/Product/Create
-        public ActionResult Create()
+        public async Task<ActionResult> Create()
         {
-            return View();
+            var model = new ProductModel
+            {
+                ProductLinkTexts = await db.ProductLinkTexts.ToListAsync(),
+                ProductTypes = await db.ProductTypes.ToListAsync()
+
+            };
+            return View(model);
         }
 
         // POST: Admin/Product/Create
