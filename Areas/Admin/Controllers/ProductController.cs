@@ -38,7 +38,8 @@ namespace ITTechs.Areas.Admin.Controllers
             {
                 return HttpNotFound();
             }
-            return View(product);
+            var model = await product.Convert(db);
+            return View(model);
         }
 
         // GET: Admin/Product/Create
