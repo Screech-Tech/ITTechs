@@ -9,6 +9,7 @@ using System.Web;
 using System.Web.Mvc;
 using ITTechs.Entities;
 using ITTechs.Models;
+using ITTechs.Areas.Admin.Models;
 
 namespace ITTechs.Areas.Admin.Controllers
 {
@@ -38,9 +39,14 @@ namespace ITTechs.Areas.Admin.Controllers
         }
 
         // GET: Admin/ProductItem/Create
-        public ActionResult Create()
+        public async Task<ActionResult> Create()
         {
-            return View();
+            var model = new ProductItemModel
+            {
+                Items = await db.Items.ToListAsync(),
+                Products = await db.Products.ToListAsync()
+            };
+            return View(model);
         }
 
         // POST: Admin/ProductItem/Create
