@@ -68,15 +68,15 @@ namespace ITTechs.Areas.Admin.Extensions
             if (productItems.Count().Equals(0))
                 return new List<ProductItemModel>();
 
-            return await( from pi in productItems
+            return await(from pi in productItems
                    select new ProductItemModel
                    {
                        ItemId = pi.ItemId,
                        ProductId = pi.ProductId,
                        ItemTitle = db.Items.FirstOrDefault(
-                           i =>i.Id.Equals(pi.ItemId)).Title,
+                           i => i.Id.Equals(pi.ItemId)).Title,
                        ProductTitle = db.Products.FirstOrDefault(
-                           p => p.Id.Equals(pi.ItemId)).Title
+                           p => p.Id.Equals(pi.ProductId)).Title
                    }).ToListAsync();
         }
     }
