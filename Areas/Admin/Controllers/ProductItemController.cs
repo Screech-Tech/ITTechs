@@ -25,18 +25,19 @@ namespace ITTechs.Areas.Admin.Controllers
         }
 
         // GET: Admin/ProductItem/Details/5
-        public async Task<ActionResult> Details(int? id)
+        public async Task<ActionResult> Details(int? itemid, int? productId)
         {
-            if (id == null)
+            if (itemid == null || productId == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ProductItem productItem = await db.ProductItems.FindAsync(id);
+            ProductItem productItem = await GetProductItem(itemid, productId);
             if (productItem == null)
             {
                 return HttpNotFound();
             }
-            return View(productItem);
+            
+            return View(await productItem.Convert(db));
         }
 
         // GET: Admin/ProductItem/Create
