@@ -9,6 +9,8 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using ITTechs.Models;
+using System.Collections.Generic;
+using ITTechs.Extensions;
 
 namespace ITTechs.Controllers
 {
@@ -488,5 +490,13 @@ namespace ITTechs.Controllers
             }
         }
         #endregion
+
+        public async Task<ActionResult> Index()
+        {
+            var users = new List<UserViewModel>();
+            await users.GetUsers();
+
+            return View(users);
+        }
     }
 }
