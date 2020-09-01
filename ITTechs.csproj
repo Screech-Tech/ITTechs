@@ -227,6 +227,7 @@
     <Content Include="Content\Images\unit-testing.png" />
     <Content Include="Content\Images\video.jpg" />
     <Content Include="Content\Logos\T&amp;W.png" />
+    <Content Include="Content\navbar.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -294,6 +295,7 @@
     <Content Include="Areas\Admin\Views\SubscriptionProduct\Details.cshtml" />
     <Content Include="Areas\Admin\Views\SubscriptionProduct\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\SubscriptionProduct\Index.cshtml" />
+    <Content Include="libman.json" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />

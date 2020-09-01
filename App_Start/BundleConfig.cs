@@ -28,6 +28,9 @@ namespace ITTechs
 
             bundles.Add(new ScriptBundle("~/bundles/admin").Include(
                       "~/Scripts/AdminMenu.js"));
+
+            bundles.Add(new StyleBundle("~/Content/ittech").Include(
+                      "~/Content/navbar.css"));
         }
     }
 }
