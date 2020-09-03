@@ -226,6 +226,8 @@
     <Content Include="Content\Images\pdf.png" />
     <Content Include="Content\Images\unit-testing.png" />
     <Content Include="Content\Images\video.jpg" />
+    <Content Include="Content\Logos\T&amp;W icon 30x152.jpg" />
+    <Content Include="Content\Logos\T&amp;W icon 45x184.jpg" />
     <Content Include="Content\Logos\T&amp;W.png" />
     <Content Include="Content\navbar.css" />
     <Content Include="favicon.ico" />
