@@ -1,4 +1,8 @@
-﻿.navbar {
+﻿body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.navbar {
     border-bottom: 1px solid #C8C8C8;
     background-color: #FFF;
 }
@@ -14,3 +18,14 @@
     .nav > li > a:hover {
         background-color: white;
     }
+
+    .navbar-nav > li > a {
+        margin-top: 25px;
+        padding-top: 2px;
+        max-height: 45px;
+    }
+
+    .body-content {
+        margin-top: 40px;
+    }
+
