@@ -30,7 +30,8 @@ namespace ITTechs
                       "~/Scripts/AdminMenu.js"));
 
             bundles.Add(new StyleBundle("~/Content/ittech").Include(
-                      "~/Content/navbar.css"));
+                      "~/Content/navbar.css",
+                      "~/Content/thumbnails.css"));
         }
     }
 }
