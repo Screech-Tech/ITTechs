@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Microsoft.AspNet.Identity;
 
 namespace ITTechs.Controllers
 {
@@ -11,6 +12,8 @@ namespace ITTechs.Controllers
     {
         public ActionResult Index()
         {
+            var userId = Request.IsAuthenticated ? HttpContext.User.Identity.GetUserId() : null;       
+
             var model = new List<ThumbnailAreaModel>();
             model.Add(new ThumbnailAreaModel
             {
