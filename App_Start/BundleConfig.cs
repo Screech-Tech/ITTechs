@@ -31,7 +31,8 @@ namespace ITTechs
 
             bundles.Add(new StyleBundle("~/Content/ittech").Include(
                       "~/Content/navbar.css",
-                      "~/Content/thumbnails.css"));
+                      "~/Content/thumbnails.css",
+                      "~/Content/ProductContent.css"));
         }
     }
 }
