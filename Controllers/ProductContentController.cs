@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 namespace ITTechs.Controllers
 {
+    [Authorize]
     public class ProductContentController : Controller
     {
         // GET: ProductContent
