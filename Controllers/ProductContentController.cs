@@ -1,4 +1,5 @@
-﻿using ITTechs.Models;
+﻿using ITTechs.Extensions;
+using ITTechs.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,12 +15,9 @@ namespace ITTechs.Controllers
         // GET: ProductContent
         public async Task<ActionResult> Index(int id)
         {
-            var model = new ProductSectionModel
-            {
-                Title = "The title",
-                Sections = new List<ProductSection>()
-            };
-            return View(model);
+            var userId = Request.IsAuthenticated ? HttpContext.GetUserId() : null;
+            var sections = await SectionExtensions.GetProductSectionAsync(id, userId);
+            return View(sections);
         }
     }
 }
