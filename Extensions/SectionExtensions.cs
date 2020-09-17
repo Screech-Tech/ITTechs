@@ -21,7 +21,7 @@ namespace ITTechs.Extensions
                 join i in db.Items on pi.ItemId equals i.Id
                 join s in db.Sections on i.SectionId equals s.Id
                 where p.Id.Equals(productId)
-                orderby s.Id
+                orderby s.Title
                 select new ProductSection
                 {
                     Id = s.Id,
@@ -34,9 +34,12 @@ namespace ITTechs.Extensions
 
             var result = sections.Distinct(new ProductSectionEqualityComparer()).ToList();
 
+            var union = result.Where(r => !r.Title.ToLower().Contains("download"))
+                        .Union(result.Where(r => r.Title.ToLower().Contains("download")));
+
             var model = new ProductSectionModel
             {
-                Sections = result,
+                Sections = union.ToList(),
                 Title = await (from p in db.Products
                                where p.Id.Equals(productId)
                                select p.Title).FirstOrDefaultAsync()
