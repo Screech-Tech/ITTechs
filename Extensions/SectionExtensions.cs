@@ -77,6 +77,7 @@ namespace ITTechs.Extensions
                                    IsAvailable = DbFunctions.CreateDateTime(today.Year,
                                    today.Month, today.Day, 0, 0, 0) >= DbFunctions.CreateDateTime(us.StartDate.Value.Year,
                                    us.StartDate.Value.Month, us.StartDate.Value.Day + i.WaitDays, 0, 0, 0),
+                                   IsDownload = it.Title.Equals("Download")
 
                                }).ToListAsync();
             return items;
