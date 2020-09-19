@@ -30,7 +30,8 @@ namespace ITTechs
                       "~/Scripts/AdminMenu.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/ui").Include(
-                      "~/Scripts/carret.js"));
+                      "~/Scripts/carret.js",
+                      "~/Scripts/JWPlayer.js"));
 
             bundles.Add(new StyleBundle("~/Content/ittech").Include(
                       "~/Content/navbar.css",
