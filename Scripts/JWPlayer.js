@@ -1,8 +1,6 @@
-﻿$(function () {
-    function jwVideo(video) {
-        jwPlayer("video").setup(
+﻿    function jwVideo(video) {
+        jwplayer("video").setup(
             {
-                file:video
+                file: video
             });
     }
-});
