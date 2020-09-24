@@ -1,4 +1,5 @@
 ﻿using ITTechs.Entities;
+using ITTechs.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -54,6 +55,24 @@ namespace ITTechs.Extensions
                         }));
             }
             catch { }
+        }
+
+        public static async Task<bool> RegisterUserSubscriptionCode(
+            string userId, string code)
+        {
+            try
+            {
+                var db = ApplicationDbContext.Create();
+                var id = await db.Subscriptions.GetSubscriptionIdByRegistrationCode(code);
+                if (id <= 0) return false;
+                await db.UserSubscriptions.Register(id, userId);
+
+                if (db.ChangeTracker.HasChanges())
+                    await db.SaveChangesAsync();
+
+                return true;
+            }
+            catch { return false; }
         }
     }
 }
