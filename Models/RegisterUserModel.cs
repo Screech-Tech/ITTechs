@@ -11,6 +11,7 @@ namespace ITTechs.Models
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]
+
         public string Email { get; set; }
         [Required]
         [StringLength(30, ErrorMessage ="The {0} must be at least {1} characters long.", MinimumLength = 2)]
