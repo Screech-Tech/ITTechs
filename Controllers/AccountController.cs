@@ -747,6 +747,9 @@ namespace ITTechs.Controllers
             return RedirectToAction("Subscriptions", "Account", new { userId = userId });
         }
 
+        [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
         public async Task<ActionResult> RegisterUserAsync(RegisterUserModel model)
         {
             model.AcceptUserAgreement = true;
