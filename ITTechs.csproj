@@ -246,6 +246,7 @@
     <Content Include="Content\Images\pdf.png" />
     <Content Include="Content\Images\unit-testing.jpg" />
     <Content Include="Content\Images\video.jpg" />
+    <Content Include="Content\login.css" />
     <Content Include="Content\Logos\T&amp;W icon 30x152.jpg" />
     <Content Include="Content\Logos\T&amp;W icon 45x184.jpg" />
     <Content Include="Content\Logos\T&amp;W.png" />
@@ -272,6 +273,7 @@
     <Content Include="Areas\Admin\Views\web.config" />
     <Content Include="Scripts\carret.js" />
     <Content Include="Scripts\JWPlayer.js" />
+    <Content Include="Scripts\login.js" />
     <Content Include="Scripts\RegisterCode.js" />
     <Content Include="Scripts\RegisterUser.js" />
     <Content Include="Views\Shared\_BackToListButtonPartial.cshtml" />

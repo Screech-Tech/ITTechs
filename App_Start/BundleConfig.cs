@@ -33,7 +33,8 @@ namespace ITTechs
                       "~/Scripts/carret.js",
                       "~/Scripts/JWPlayer.js",
                       "~/Scripts/RegisterCode.js",
-                      "~/Scripts/RegisterUser.js"));
+                      "~/Scripts/RegisterUser.js",
+                       "~/Scripts/login.js"));
 
             bundles.Add(new StyleBundle("~/Content/ittech").Include(
                       "~/Content/navbar.css",
@@ -41,7 +42,8 @@ namespace ITTechs
                       "~/Content/ProductContent.css",
                       "~/Content/carret.css",
                       "~/Content/RegisterCode.css",
-                      "~/Content/RegisterUser.css"));
+                      "~/Content/RegisterUser.css",
+                      "~/Content/login.css"));
         }
     }
 }
