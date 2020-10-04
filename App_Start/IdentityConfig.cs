@@ -11,6 +11,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
 using ITTechs.Models;
+using ITTechs.Extensions;
 
 namespace ITTechs
 {
@@ -19,6 +20,7 @@ namespace ITTechs
         public Task SendAsync(IdentityMessage message)
         {
             // Подключите здесь службу электронной почты для отправки сообщения электронной почты.
+            message.Send(); 
             return Task.FromResult(0);
         }
     }
