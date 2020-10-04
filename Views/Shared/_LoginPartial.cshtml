@@ -1,5 +1,6 @@
 ﻿@using Microsoft.AspNet.Identity
 @using ITTechs.Extensions
+@using ITTechs.Models
 
 @if (Request.IsAuthenticated)
 {
@@ -22,7 +23,8 @@ else
         <li>
             @Html.GlyphLink("Account", "Login", "Log in", "user", "", "loginLink")
             <div class="hidden-xs" login-panel-partial>
-
+                @Html.Partial("_LoginPanelPartial", new LoginViewModel {
+                    Email="", Password="", RememberMe=false})
             </div>
         </li>
     </ul>
