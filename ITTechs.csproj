@@ -241,6 +241,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\carret.css" />
+    <Content Include="Content\forgot-password.css" />
     <Content Include="Content\Images\csharp-for-beginners.png" />
     <Content Include="Content\Images\csharp-zip.png" />
     <Content Include="Content\Images\laptop.jpg" />
@@ -273,6 +274,7 @@
     <Content Include="Areas\Admin\Views\Section\Index.cshtml" />
     <Content Include="Areas\Admin\Views\web.config" />
     <Content Include="Scripts\carret.js" />
+    <Content Include="Scripts\forgot-password.js" />
     <Content Include="Scripts\JWPlayer.js" />
     <Content Include="Scripts\login.js" />
     <Content Include="Scripts\RegisterCode.js" />
